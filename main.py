@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_restful import Api, Resource, reqparse
 
+# https://www.youtube.com/watch?v=GMppyAPbLYk&list=PLHocQMwDsV-jp3z7T4ousLoTpaM_3uGBs&index=17&ab_channel=TechWithTim
+
 app = Flask(__name__)
 api = Api(app)
 
@@ -8,8 +10,6 @@ video_put_args = reqparse.RequestParser()
 video_put_args.add_argument('name', type=str, help='Name of the video is required', required = True)
 video_put_args.add_argument('views', type=int, help='Views of the video is required', required = True)
 video_put_args.add_argument('likes', type=int, help='Likes on the video is required', required = True)
-
-#SSS
 
 videos = {}
 
